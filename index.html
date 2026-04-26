@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Jobsy - Reclutamiento de Próxima Generación</title>
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind Config (Debe tener este ID para que el CDN lo reconozca) -->
+    <script id="tailwind-config" src="script.js"></script>
+</head>
+<body class="bg-background text-on-background font-body-md">
+
+    <!-- TopAppBar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-12">
+                <span class="text-2xl font-extrabold text-slate-900 dark:text-white font-h2">Jobsy</span>
+                <div class="hidden md:flex gap-8">
+                    <a class="font-label-md text-label-md text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors duration-200" href="#">Sobre nosotros</a>
+                    <a class="font-label-md text-label-md text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors duration-200" href="#servicios">Servicios</a>
+                    <a class="font-label-md text-label-md text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors duration-200" href="#testimonios">Testimonios</a>
+                    <a class="font-label-md text-label-md text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors duration-200" href="#contacto">Contacto</a>
+                    <a class="font-label-md text-label-md text-slate-600 dark:text-slate-400 hover:text-emerald-500 transition-colors duration-200" href="#planes">Planes</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="font-label-md text-label-md px-4 py-2 text-slate-600 hover:text-emerald-500 transition-colors active:scale-95">Iniciar Sesión</button>
+                <button class="font-label-md text-label-md px-6 py-2.5 bg-secondary text-white rounded-lg hover:opacity-90 transition-all active:scale-95 shadow-sm">Registrarse</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden py-xl md:py-32">
+            <div class="max-w-[1280px] mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
+                <div class="z-10">
+                    <span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">
+                        Reclutamiento de Próxima Generación
+                    </span>
+                    <h1 class="font-h1 text-h1 text-primary mb-6 leading-tight">
+                        Tu proceso de contratación, <span class="text-secondary">automatizado</span> y profesional
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                        Optimiza tu búsqueda de talento con IA de vanguardia. Reducimos el tiempo de contratación en un 60% mientras elevamos la calidad de tus candidatos.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="px-8 py-4 bg-primary text-white rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-primary-container transition-all active:scale-95">
+                            Comenzar ahora
+                            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                        </button>
+                        <button class="px-8 py-4 border-2 border-primary text-primary rounded-xl font-label-md text-label-md hover:bg-primary/5 transition-all active:scale-95">
+                            Ver demostración
+                        </button>
+                    </div>
+                    <div class="mt-12 flex items-center gap-4">
+                        <div class="flex -space-x-3">
+                            <img class="w-10 h-10 rounded-full border-2 border-white object-cover" alt="Mujer de negocios" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaJYOQws0gqPOxaYwx-22vrZcCe-m-rwcmOshkdFDcZbn_15jHzC1eI5xlSAmFcosD0akJS8QLsCABVVqOO8BYjjNzxvmVP1HQRu7S5Z8p4lFwq0t10vnPnUuPSnHN8UfURLLPyaUPCptSGOuHgO_ANlZ9rap1T5ySXQqHTMembEb-hJKRjLwiMUFaZal-He2WtOSheIQbPF3Fm64uusq3WAsYNYDxde4UVN9PjNlOsmRfv5XGCyp0XCJnbtrTJG-DMWWAOKtoOsfM"/>
+                            <img class="w-10 h-10 rounded-full border-2 border-white object-cover" alt="Ejecutivo profesional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQFCO-kCXnSST_1HDBdatVHgB5gUah-BZtbhSkwv_dwa3hqHow80x_ExknwiNgMKFZaKE9XQPEwq6BNuRrsyWRtQHvwh15u6rnscT0djyX_MLz1DwwRpQ_d4MDj1Q7xrNWZdXRT3S1SRpJmTwDy9qjAXCuoxctTY8tLBZs4b7Jws7CVS0xCDRfMZmzrJSfDICyve-ESA3MqeLoAoL67EFa-jVYopxpGJKY992Qd_eXbf16d-7CeR_QohwnDrDN4N-xSGFjVW1sk7PA"/>
+                            <img class="w-10 h-10 rounded-full border-2 border-white object-cover" alt="Mujer en oficina" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa4FeY2c-ZvcwxDqgX0KtKCTF41Rl8wcsQV-xBDH876RvTjhV3vU7Xc1tdLfE6yIQNzVOWLa6YTndsQ1xfd30yrVnBdFAmgTQ5iEaRQPQUaMKtAVDSiZUo4eeiwidKu7MvJAPS1-Ur0Wb9UsyVMPPhL84mFqJ3gwMTXVRyqzlMTJSuksX1W2dTKISb2tTQAsLsNNlXmta9xfaPh0rcnrrfToYJlbXOrL2zWqeYpkh0lyqczOP57lkZim4TvUvFqnLK1eFLyFWbyiCG"/>
+                        </div>
+                        <p class="text-label-sm font-label-sm text-on-surface-variant">
+                            <span class="font-bold text-primary">+500 empresas</span> ya confían en nosotros
+                        </p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-secondary/10 rounded-3xl -rotate-3 transform scale-105 blur-2xl"></div>
+                    <img class="relative rounded-3xl shadow-2xl w-full h-[500px] object-cover" alt="Espacio de trabajo moderno" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOfEM8aR_FwrLFAeUHpJNXloSkxGIkiY_tNZwbpV2g20oHV38Qx50Vh4myh3J_SGFxC4yJTCoFua7mb5fit_n5ahyQS2q0vl33MirLO0I0E9aI9jkadBNArZYNAJzTHkvb333N1gRiF8Y4RzIhsw7MSP_kUBlAOfDFeUzHG6F5LCaD6aB7pMG9pcuZOU_5M2VGbdoMBQhu3ZuXw0vUcZhge2TkoGxtfqwKWcc2_KwVvYXh0GvvVrUM0_APOeAl_ZF1nKkzjLGtEUbQ"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-xl bg-surface-container-low" id="servicios">
+            <div class="max-w-[1280px] mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="font-h2 text-h2 text-primary mb-4">Nuestros Servicios</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Tecnología de punta diseñada para simplificar cada etapa de tu flujo de reclutamiento.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">work</span>
+                        </div>
+                        <h3 class="font-h3 text-h3 text-primary mb-3">Ofertas de trabajo</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Publicación multicanal automática en los portales más relevantes del sector.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">psychology</span>
+                        </div>
+                        <h3 class="font-h3 text-h3 text-primary mb-3">IA de análisis</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Nuestro motor inteligente clasifica y pre-selecciona a los mejores candidatos.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">bolt</span>
+                        </div>
+                        <h3 class="font-h3 text-h3 text-primary mb-3">Procesos rápidos</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Reduce el ciclo de contratación de semanas a tan solo unos pocos días.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">support_agent</span>
+                        </div>
+                        <h3 class="font-h3 text-h3 text-primary mb-3">Equipo 24/7</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Soporte técnico y asesoría estratégica disponible en cualquier momento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="py-xl">
+            <div class="max-w-[1280px] mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2">
+                        <img class="rounded-3xl shadow-lg h-[600px] w-full object-cover" alt="Equipo de reclutadores" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK9g8ijxKfcjxWhpN-BWGk4TytbsIgcc3rhEzKlFVdN18QrWV9isrIayleCaPiYOnGM3W1V9ugxutTGUXAprazQ31XV7XU1rDbH6QbOKMXspe-R9ZRSp24hpThNGTZuFmorxe_6AF3hpuVXQrGQ76qCM0hYfmNBZUAHTFssdcQVBIqWC9R14jezkkj9j4DOI76eRljR49R8hkkQO_9kvOWVUQ8sHAjjzWt6a1AdgTieClLl3VX9cnpZXkeTKCr7HuNTYU0rLDCzgZP"/>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h2 class="font-h2 text-h2 text-primary mb-6">Nuestra Misión y Visión</h2>
+                        <div class="space-y-8">
+                            <div>
+                                <div class="flex items-center gap-3 mb-3 text-secondary">
+                                    <span class="material-symbols-outlined">flag</span>
+                                    <span class="font-label-md text-label-md">Misión</span>
+                                </div>
+                                <p class="font-body-lg text-body-lg text-on-surface-variant">
+                                    Humanizar el reclutamiento a través de la tecnología, asegurando que cada empresa encuentre su pieza perfecta y cada talento su oportunidad ideal.
+                                </p>
+                            </div>
+                            <div class="h-px bg-slate-200"></div>
+                            <div>
+                                <div class="flex items-center gap-3 mb-3 text-secondary">
+                                    <span class="material-symbols-outlined">visibility</span>
+                                    <span class="font-label-md text-label-md">Visión</span>
+                                </div>
+                                <p class="font-body-lg text-body-lg text-on-surface-variant">
+                                    Convertirnos en el estándar global de contratación inteligente, donde la eficiencia y la empatía convergen para crear equipos excepcionales.
+                                </p>
+                            </div>
+                            <div class="pt-6">
+                                <button class="flex items-center gap-2 text-primary font-label-md text-label-md group">
+                                    Conoce más sobre nuestra historia
+                                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="py-xl bg-primary text-white" id="planes">
+            <div class="max-w-[1280px] mx-auto px-6 text-center">
+                <h2 class="font-h2 text-h2 mb-4">Planes diseñados para crecer</h2>
+                <p class="font-body-md text-body-md text-slate-400 mb-16 max-w-xl mx-auto">Escoge la solución que mejor se adapte al volumen de contrataciones de tu empresa.</p>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Plan Básico -->
+                    <div class="bg-white/5 border border-white/10 p-10 rounded-3xl text-left hover:bg-white/10 transition-all duration-300">
+                        <h3 class="font-h3 text-h3 mb-2">Plan Básico</h3>
+                        <div class="flex items-baseline gap-2 mb-8">
+                            <span class="text-4xl font-bold">$99</span>
+                            <span class="text-slate-400 font-label-sm">/mes</span>
+                        </div>
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-center gap-3 text-slate-300">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                5 Ofertas activas
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-300">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Análisis de IA estándar
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-300">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Soporte por correo
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-500 line-through">
+                                <span class="material-symbols-outlined">cancel</span>
+                                Panel personalizado
+                            </li>
+                        </ul>
+                        <button class="w-full py-4 border border-white rounded-xl font-label-md text-label-md hover:bg-white hover:text-primary transition-all">
+                            Seleccionar Plan
+                        </button>
+                    </div>
+                    <!-- Plan Pro -->
+                    <div class="bg-white p-10 rounded-3xl text-left text-primary relative">
+                        <div class="absolute top-0 right-10 -translate-y-1/2 bg-secondary text-white px-4 py-1.5 rounded-full text-label-sm font-label-md">
+                            MÁS POPULAR
+                        </div>
+                        <h3 class="font-h3 text-h3 mb-2">Plan Pro</h3>
+                        <div class="flex items-baseline gap-2 mb-8">
+                            <span class="text-4xl font-bold">$249</span>
+                            <span class="text-slate-500 font-label-sm">/mes</span>
+                        </div>
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Ofertas ilimitadas
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                IA Avanzada (Matching exacto)
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Soporte prioritario 24/7
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Branding personalizado
+                            </li>
+                        </ul>
+                        <button class="w-full py-4 bg-secondary text-white rounded-xl font-label-md text-label-md hover:bg-secondary/90 shadow-lg shadow-secondary/20 transition-all active:scale-95">
+                            Comenzar Prueba Gratis
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-xl" id="testimonios">
+            <div class="max-w-[1280px] mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="font-h2 text-h2 text-primary mb-4">Lo que dicen los expertos</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Líderes de RRHH que han transformado su manera de contratar.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex gap-1 text-secondary mb-6">
+                            <span class="material-symbols-outlined fill">star</span>
+                            <span class="material-symbols-outlined fill">star</span>
+                            <span class="material-symbols-outlined fill">star</span>
+                            <span class="material-symbols-outlined fill">star</span>
+                            <span class="material-symbols-outlined fill">star</span>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant italic mb-8">
+                            "Jobsy ha cambiado las reglas del juego. No solo ahorramos tiempo, sino que la calidad de los perfiles que recibimos es significativamente superior."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img class="w-12 h-12 rounded-full object-cover" alt="Elena Martínez" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5fvH3wW5-yeGTCti1NIyAuNQrBwGO4zHlnI1G3_NAuiKBAtZPG34zJdR2blNfkrPBl7vM6alc8CnXMFtQCtWtoTKpJTMCAgEVTKqcwPVeqQC7in9MVJtlJMafKab4yi5Q-ZSEJTIuXeieVK-uh8riL95v4mPJNDfOJ9VcqeU4v_DYLGmzayBXXT52HlESTmaWmqohMglhSALGEVXB1Irxod9i_DOVh7Gm8qZ5itAOML5Yylv9B_0BMbSHiFQ7EUTrojrqZVyxOD1T"/>
+                            <div>
+                                <h4 class="font-label-md text-label-md text-primary">Elena Martínez</h4>
+                                <p class="text-label-sm font-label-sm text-on-surface-variant">HR Director, TechFlow</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex gap-1 text-secondary mb-6">
+                            <span class="material-symbols-outlined fill">star</span>
+                            <span class="material-symbols-outlined fill">star</span>
+                            <span class="material-symbols-outlined fill">star</span>
+                            <span class="material-symbols-outlined fill">star</span>
+                            <span class="material-symbols-outlined fill">star</span>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant italic mb-8">
+                            "La automatización es impecable. El sistema de filtrado nos permite enfocarnos en las entrevistas finales con la seguridad de que el talento es el adecuado."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img class="w-12 h-12 rounded-full object-cover" alt="Ricardo Sosa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYXfn7rgbv1qjgV69TTjfSt7pbw5xTe3fjXscZawxeYKizDE0kV3hMGasuDOj7C8Etxpb3sWFIPBb5ZPvUheaYBW19MT6TyBiLC-PXE0kT1tTJtvemuYsouhzrdgCGSYXQinsnWXIPc43EVnvcicjItmyOZHA1T3HlaqmMVVeLZh6RjxbSCFXIU-3pWVMlzl8eENlbMNJrgA1VU9T2GQ_kVqa9sEw5brdW6mRkDqHZq3Q4KRsXIrZSq8H59lHybu4OHb6pv7zZh9Ii"/>
+                            <div>
+                                <h4 class="font-label-md text-label-md text-primary">Ricardo Sosa</h4>
+                                <p class="text-label-sm font-label-sm text-on-surface-variant">CEO, BuildIt</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex gap-1 text-secondary mb-6">
+                            <span class="material-symbols-outlined fill">star</span>
+                            <span class="material-symbols-outlined fill">star</span>
+                            <span class="material-symbols-outlined fill">star</span>
+                            <span class="material-symbols-outlined fill">star</span>
+                            <span class="material-symbols-outlined fill">star</span>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant italic mb-8">
+                            "Excelente soporte y una interfaz muy intuitiva. Jobsy es, sin duda, la mejor inversión que hemos hecho para nuestro equipo de talento este año."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img class="w-12 h-12 rounded-full object-cover" alt="Carla Ruiz" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZM2nKk5-1tfVz1yYzgLLda7JAIRtIHbM_qBBR3Ewx0vaSBxP5VTkM_sTYCLS47mAKt6NINOBNJhtU_gq_vcSi3LaqvW7M63_sghjv-XvnReqbxpXOvPQu9jEwLsClijbixw_Z3Oo3xjlA_98xEmOP_sJ8wFNrqrVFAQUYF-iNpufA3SrjhH6yTxUiy7h-cr1PM4Rhw500o-p9cYQ0l1_Xs2mNe5WXA1qiDlfo6yP5rFt_urKGW7JD3V_43n3HWf8VMDaElywiY_bY"/>
+                            <div>
+                                <h4 class="font-label-md text-label-md text-primary">Carla Ruiz</h4>
+                                <p class="text-label-sm font-label-sm text-on-surface-variant">Talent Acquisition, Innova</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-xl bg-surface-container" id="contacto">
+            <div class="max-w-[1280px] mx-auto px-6">
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-12 bg-primary text-white">
+                        <h2 class="font-h2 text-h2 mb-6">Hablemos de tu próximo equipo</h2>
+                        <p class="font-body-md text-body-md text-slate-400 mb-12">
+                            ¿Tienes dudas o necesitas un plan a medida? Nuestro equipo de expertos está listo para ayudarte.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-secondary">mail</span>
+                                <span>hola@jobsy.com</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-secondary">call</span>
+                                <span>+34 900 123 456</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-secondary">location_on</span>
+                                <span>Calle Innovación 42, Madrid</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-12">
+                        <form class="space-y-6">
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="font-label-md text-label-md text-primary">Nombre</label>
+                                    <input class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all" placeholder="Tu nombre" type="text"/>
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="font-label-md text-label-md text-primary">Email</label>
+                                    <input class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all" placeholder="tu@email.com" type="email"/>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-md text-label-md text-primary">Teléfono</label>
+                                <input class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all" placeholder="+34 000 000 000" type="tel"/>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-md text-label-md text-primary">Mensaje</label>
+                                <textarea class="w-full bg-surface border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all resize-none" placeholder="¿Cómo podemos ayudarte?" rows="4"></textarea>
+                            </div>
+                            <button class="w-full py-4 bg-primary text-white rounded-xl font-label-md text-label-md hover:bg-primary-container transition-all active:scale-95" type="submit">
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 dark:bg-black w-full relative bottom-0 border-t border-slate-800">
+        <div class="max-w-[1280px] mx-auto px-8 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-12">
+                <div class="text-left">
+                    <span class="text-xl font-bold text-white block mb-4">Jobsy</span>
+                    <p class="text-slate-400 max-w-xs font-label-sm text-label-sm">Transformando el futuro del reclutamiento con inteligencia artificial y un toque humano.</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <a class="text-slate-400 hover:text-emerald-400 transition-colors font-label-md text-label-md" href="#">Privacidad</a>
+                    <a class="text-slate-400 hover:text-emerald-400 transition-colors font-label-md text-label-md" href="#">Términos</a>
+                    <a class="text-slate-400 hover:text-emerald-400 transition-colors font-label-md text-label-md" href="#">Blog</a>
+                    <a class="text-slate-400 hover:text-emerald-400 transition-colors font-label-md text-label-md" href="#">Soporte</a>
+                    <a class="text-slate-400 hover:text-emerald-400 transition-colors font-label-md text-label-md" href="#">Cookies</a>
+                </div>
+                <div class="flex gap-4">
+                    <button class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-white transition-all">
+                        <span class="material-symbols-outlined">share</span>
+                    </button>
+                    <button class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-white transition-all">
+                        <span class="material-symbols-outlined">public</span>
+                    </button>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-400 font-label-sm text-label-sm">© 2024 Jobsy. Soluciones de Reclutamiento Moderno.</p>
+                <div class="flex gap-6">
+                    <span class="text-slate-500 text-label-sm">Hecho con pasión por el talento.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
